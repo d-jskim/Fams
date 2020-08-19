@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="720.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.fam.view.MainLoginController">
+   <children>
+      <Label alignment="CENTER" contentDisplay="CENTER" layoutX="768.0" layoutY="125.0" prefHeight="46.0" prefWidth="91.0" text="로그인" textAlignment="CENTER" textOverrun="CLIP">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="768.0" layoutY="201.0" text="ID">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="765.0" layoutY="274.0" text="비밀번호">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="765.0" layoutY="327.0" text="가족ID">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="779.0" layoutY="232.0" text="*ID는 e-mail로 입력해주시기 바랍니다.">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <TextField fx:id="memberIdField" layoutX="864.0" layoutY="204.0" />
+      <TextField fx:id="passwordField" layoutX="864.0" layoutY="276.0" />
+      <TextField fx:id="familyIDField" layoutX="864.0" layoutY="328.0" />
+      <Button layoutX="805.0" layoutY="399.0" mnemonicParsing="false" onAction="#handleJoin" text="JOIN">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Button>
+      <Button layoutX="884.0" layoutY="399.0" mnemonicParsing="false" onMouseClicked="#handleExit" text="Cancel">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Button>
+      <Button layoutX="994.0" layoutY="399.0" mnemonicParsing="false" onMouseClicked="#handleSignUp" text="회원가입">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>

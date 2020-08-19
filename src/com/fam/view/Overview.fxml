@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.chart.BarChart?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.LineChart?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.chart.StackedBarChart?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="720.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.fam.view.OverviewController">
+   <children>
+      <SplitPane dividerPositions="0.7097026604068858" layoutX="315.0" layoutY="125.0" prefHeight="720.0" prefWidth="1280.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <items>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+               <children>
+                  <TitledPane animated="false" layoutX="141.0" layoutY="120.0" prefHeight="718.0" prefWidth="862.0" text="TO DO LIST" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                    <content>
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <TabPane layoutX="62.0" layoutY="87.0" prefHeight="688.0" prefWidth="860.0" tabClosingPolicy="UNAVAILABLE" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                <tabs>
+                                  <Tab text="TO DO LIST">
+                                    <content>
+                                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                             <children>
+                                                <TableView fx:id="taskTable" layoutX="44.0" layoutY="74.0" prefHeight="233.0" prefWidth="793.0">
+                                                  <columns>
+                                                    <TableColumn fx:id="categoryColumn" prefWidth="102.0" text="CATEGORY" />
+                                                    <TableColumn fx:id="taskColumn" minWidth="3.0" prefWidth="101.0" text="TASK" />
+                                                      <TableColumn fx:id="statusColumn" prefWidth="95.0" text="STATUS" />
+                                                      <TableColumn fx:id="memberColumn" prefWidth="97.0" text="MEMBER" />
+                                                      <TableColumn fx:id="substituteColumn" prefWidth="99.0" text="SUBSTITUTE" />
+                                                      <TableColumn fx:id="startDateColumn" prefWidth="118.0" text="START DATE" />
+                                                      <TableColumn fx:id="endDateColumn" prefWidth="117.0" text="END DATE" />
+                                                      <TableColumn fx:id="likeNoColumn" prefWidth="63.0" text="LIKE" />
+                                                  </columns>
+                                                </TableView>
+                                                <GridPane layoutX="67.0" layoutY="324.0" prefHeight="224.0" prefWidth="660.0">
+                                                  <columnConstraints>
+                                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="323.0" minWidth="10.0" prefWidth="192.0" />
+                                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="500.0" minWidth="10.0" prefWidth="468.0" />
+                                                  </columnConstraints>
+                                                  <rowConstraints>
+                                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                  </rowConstraints>
+                                                   <children>
+                                                      <Label text="CATEGORY" />
+                                                      <Label text="TASK" GridPane.rowIndex="1" />
+                                                      <Label text="STATUS" GridPane.rowIndex="2" />
+                                                      <Label text="MEMBER" GridPane.rowIndex="3" />
+                                                      <Label text="SUBSTITUTE" GridPane.rowIndex="4" />
+                                                      <Label text="START DATE" GridPane.rowIndex="5" />
+                                                      <Label text="END DATE" GridPane.rowIndex="6" />
+                                                      <Label text="MEMO" GridPane.rowIndex="7" />
+                                                      <Label text="LIKE" GridPane.rowIndex="8" />
+                                                      <Label fx:id="categoryLabel" text="category" GridPane.columnIndex="1" />
+                                                      <Label fx:id="taskLabel" text="task" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                                                      <Label fx:id="statusLabel" text="status" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                                                      <Label fx:id="memberLabel" text="member" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                                                      <Label fx:id="substituteLabel" text="substitute" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                                                      <Label fx:id="startDateLabel" text="start date" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+                                                      <Label fx:id="endDateLabel" text="end date" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+                                                      <Label fx:id="memoLabel" text="memo" GridPane.columnIndex="1" GridPane.rowIndex="7" />
+                                                      <Label fx:id="likeNoLabel" text="like no" GridPane.columnIndex="1" GridPane.rowIndex="8" />
+                                                   </children>
+                                                </GridPane>
+                                                <Button layoutX="719.0" layoutY="548.0" mnemonicParsing="false" onAction="#handleDeleteTask" prefHeight="40.0" prefWidth="80.0" text="DELETE" />
+                                                <Button layoutX="616.0" layoutY="548.0" mnemonicParsing="false" onAction="#handleEditTask" prefHeight="40.0" prefWidth="80.0" text="EDIT" />
+                                                <Button layoutX="510.0" layoutY="548.0" mnemonicParsing="false" onAction="#handleNewTask" prefHeight="40.0" prefWidth="80.0" text="NEW" />
+                                                <Button fx:id="myListBtn" layoutX="44.0" layoutY="40.0" mnemonicParsing="false" onAction="#showMyTaskTable" prefHeight="29.0" prefWidth="120.0" text="My To Do List" />
+                                                <Button fx:id="famListBtn" layoutX="174.0" layoutY="40.0" mnemonicParsing="false" onAction="#resetTaskTable" prefHeight="29.0" prefWidth="120.0" text="Family List" />
+                                             </children></AnchorPane>
+                                    </content>
+                                  </Tab>
+                                  <Tab onSelectionChanged="#showChart" text="DATA ANALYTICS">
+                                    <content>
+                                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                             <children>
+                                                <StackedBarChart fx:id="barChart4" layoutX="469.0" layoutY="19.0" prefHeight="300.0" prefWidth="390.0" title="개인별 집안일 횟수">
+                                                  <xAxis>
+                                                    <CategoryAxis side="BOTTOM" fx:id="xAxis4" />
+                                                  </xAxis>
+                                                  <yAxis>
+                                                    <NumberAxis side="LEFT" />
+                                                  </yAxis>
+                                                </StackedBarChart>
+                                                <BarChart fx:id="barChart3" layoutX="469.0" layoutY="353.0" prefHeight="280.0" prefWidth="390.0" title="개인 세부 항목" titleSide="BOTTOM">
+                                                  <xAxis>
+                                                    <CategoryAxis side="BOTTOM" fx:id="xAxis3" />
+                                                  </xAxis>
+                                                  <yAxis>
+                                                    <NumberAxis side="LEFT" />
+                                                  </yAxis>
+                                                </BarChart>
+                                                <ChoiceBox fx:id="nameBox" layoutX="604.0" layoutY="342.0" prefHeight="22.0" prefWidth="97.0" />
+                                                <LineChart fx:id="barChart5" layoutX="61.0" layoutY="353.0" prefHeight="280.0" prefWidth="390.0" title="횟수 추이 그래프" titleSide="BOTTOM">
+                                                  <xAxis>
+                                                    <CategoryAxis side="BOTTOM" fx:id="xAxis5" />
+                                                  </xAxis>
+                                                  <yAxis>
+                                                    <NumberAxis side="LEFT" />
+                                                  </yAxis>
+                                                </LineChart>
+                                                <ChoiceBox fx:id="nameBox1" layoutX="209.0" layoutY="342.0" prefHeight="22.0" prefWidth="93.0" />
+                                                <Label layoutX="73.0" layoutY="343.0" text="멤버를 선택하세요 : ">
+                                                   <font>
+                                                      <Font size="15.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label layoutX="469.0" layoutY="343.0" text="멤버를 선택하세요 : ">
+                                                   <font>
+                                                      <Font size="15.0" />
+                                                   </font>
+                                                </Label>
+                                                <BarChart fx:id="barChart2" layoutX="61.0" layoutY="19.0" prefHeight="300.0" prefWidth="390.0" title="진행상태">
+                                                  <xAxis>
+                                                    <CategoryAxis side="BOTTOM" fx:id="xAxis2" />
+                                                  </xAxis>
+                                                  <yAxis>
+                                                    <NumberAxis side="LEFT" />
+                                                  </yAxis>
+                                                </BarChart>
+                                             </children></AnchorPane>
+                                    </content>
+                                  </Tab>
+                                </tabs>
+                              </TabPane>
+                           </children>
+                        </AnchorPane>
+                    </content>
+                  </TitledPane>
+               </children></AnchorPane>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+               <children>
+                  <TitledPane animated="false" layoutX="122.0" layoutY="163.0" prefHeight="718.0" prefWidth="408.0" text="CHATTING" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                    <content>
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="688.0" prefWidth="341.0">
+                           <children>
+                              <TextArea fx:id="outputText" layoutX="42.0" layoutY="99.0" prefHeight="459.0" prefWidth="287.0" />
+                              <TextArea fx:id="inputText" layoutX="42.0" layoutY="574.0" onKeyPressed="#inputTextKeyEvent" prefHeight="69.0" prefWidth="213.0" />
+                              <Button layoutX="261.0" layoutY="574.0" mnemonicParsing="false" onAction="#send" prefHeight="69.0" prefWidth="67.0" text="SEND" />
+                           </children></AnchorPane>
+                    </content>
+                  </TitledPane>
+               </children></AnchorPane>
+        </items>
+      </SplitPane>
+   </children>
+</AnchorPane>
